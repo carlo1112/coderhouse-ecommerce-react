@@ -1,11 +1,15 @@
 import CartWidget from '../CartWidget/CartWidget';
+// Se importan componentes de react-bootstrap
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 
+// Se importan FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSlidersH } from '@fortawesome/free-solid-svg-icons'
 
+// Se crea variable para el icono
 const iconSlider = <FontAwesomeIcon icon={faSlidersH} />
 
+// NavBar genera el menú Navbar que a su vez contiene al componente CartWidget
 const NavBar = ({ cantidadItems }) => {
   return (
     <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
@@ -43,7 +47,5 @@ const NavBar = ({ cantidadItems }) => {
     </Navbar>
   )
 }
-
-
 
 export default NavBar

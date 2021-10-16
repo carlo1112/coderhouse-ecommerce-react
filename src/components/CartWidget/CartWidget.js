@@ -6,6 +6,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const iconCart = <FontAwesomeIcon icon={faShoppingCart} color="white" />
 
+// El componente CartWidget contiene un icono de carrito y un numero que muestra un valor recibido de un componente superior.
 const CartWidget = ({ cantidad }) => {
   return (
     <div className="cart_widget">
