@@ -5,11 +5,11 @@ import ItemListContainer from "../ItemListContainer/ItemListContainer"
 const Main = () => {
   // Se crean dos constantes para pasar sus valores como props a los componentes correspondientes
   const user = "Charly";
-  const stock = 5;
+  const stockCarrito = 5;
 
   return (
     <main>
-      <NavBar cantidadItems={stock} />
+      <NavBar cantidadItems={stockCarrito} />
       <ItemListContainer greeting={`Bienvenido ${user} a Sonido Codeado`} />
     </main>
   )

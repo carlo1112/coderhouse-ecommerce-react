@@ -1,7 +1,8 @@
 .itemListContainer {
   background-color: burlywood;
-  display: flex;
+  display:grid;
   margin-top: 55px;
   padding: 10px;
   justify-content: center;
+  grid: row;
 }
