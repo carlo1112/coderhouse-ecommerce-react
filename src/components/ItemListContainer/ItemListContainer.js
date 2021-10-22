@@ -9,7 +9,6 @@ const ItemListContainer = ({ greeting }) => {
   const stock = 0
   const stock2 = 3
 
-  //stock ? 1 : 0
   return (
     <div className="itemListContainer">
       <Row>
