@@ -1,7 +1,7 @@
 import './ItemListContainer.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { Row, Col } from 'react-bootstrap';
-
+import ItemList from './ItemList/ItemList';
+import productos from '../productos/productos'
 
 // Contenedor para mostrar items, actualmente solo muestra un saludo recibido de un componente superior.
 const ItemListContainer = ({ greeting }) => {
@@ -11,15 +11,18 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div className="itemListContainer">
-      <Row>
-        <Col><h2>{greeting}</h2></Col>
-      </Row>
-      <Row>
-        <Col>
+      <div className="container-fluid row">
+        <div className="container justify-content-center display-flex p-2 text-center">
+          <h2>{greeting}</h2>
+        </div>
+        <div className="container-fluid d-flex text-center">
           <ItemCount stock={stock} initial={1} />
           <ItemCount stock={stock2} initial={1} />
-        </Col>
-      </Row>
+        </div>
+        <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+          <ItemList items={productos} />
+        </div>
+      </div>
     </div>
   )
 }

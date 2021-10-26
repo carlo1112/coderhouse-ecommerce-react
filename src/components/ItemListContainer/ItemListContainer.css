@@ -1,8 +1,13 @@
 .itemListContainer {
   background-color: burlywood;
-  display:grid;
+  display: flex;
   margin-top: 55px;
   padding: 10px;
-  justify-content: center;
-  grid: row;
+  justify-content: center;    
+  flex-direction: column;
+}
+
+.tarjetasProductos {
+  justify-content:space-around;
+  display:grid;  
 }

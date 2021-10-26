@@ -28,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }
 
   return (
-    <div>
+    <div className="container col-md-6">
       <div className="container justify-content-center display-flex col-6 p-2">
         <div className="container d-flex justify-content-around col-8 p-2">
           <button className="btn btn-primary" onClick={modificarStock.restarStock} disabled={stockItem === 0 && cantidad === 0}>-</button>
@@ -41,7 +41,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div className="container d-flex justify-content-center">
           <p>Stock disponible: {stockItem}</p>
         </div>
-
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <main>
       <NavBar cantidadItems={stockCarrito} />
-      <ItemListContainer greeting={`Bienvenido ${user} a Sonido Codeado`} />
+      <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
     </main>
   )
 }

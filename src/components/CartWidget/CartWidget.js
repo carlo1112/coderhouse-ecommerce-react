@@ -12,7 +12,9 @@ const CartWidget = ({ cantidad }) => {
     <div className="cart_widget">
       <Container fluid>
         {iconCart}
-        {cantidad}
+        <div className="cantidadCarrito">
+          <h5>{cantidad}</h5>
+        </div>
       </Container>
     </div>
 
