@@ -29,7 +29,6 @@ const ItemList = ({ items }) => {
   return (
     <>
       {cargando ? <h2>Cargando Productos...</h2> : ( //Si cargando es verdadero se muestra el mensaje, sino se muestran las tarjetas.
-        /*productos.length() > 0 ?*/
         productos.map((producto) =>
           <Item id={producto.id} title={producto.marca + ' ' + producto.modelo}
             description={producto.descripcion} price={producto.precio} pictureUrl={producto.img} />
