@@ -1,13 +1,33 @@
 import './ItemListContainer.css';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from './ItemList/ItemList';
-import productos from '../productos/productos'
+import productos_js from '../productos/productos'
+import { useState, useEffect } from "react"
 
 // Contenedor para mostrar items, actualmente solo muestra un saludo recibido de un componente superior.
 const ItemListContainer = ({ greeting }) => {
 
   const stock = 0
   const stock2 = 3
+
+  const [productos, setProductos] = useState([])
+  const [cargando, setCargando] = useState(true) //mientras los productos no cargan cargando esta en verdadero
+
+  //Para que se renderize una sola vez hay que aplicarle un array vacío.
+  useEffect(() => {
+    const productos = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(productos_js)
+        }, 2000)
+      })
+    }
+    productos()
+      .then((prods) => {
+        setProductos(prods)
+        setCargando(false)
+      })
+  }, [])
 
   return (
     <div className="itemListContainer">
@@ -19,11 +39,14 @@ const ItemListContainer = ({ greeting }) => {
           <ItemCount stock={stock} initial={1} />
           <ItemCount stock={stock2} initial={1} />
         </div>
-        <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
-          <ItemList items={productos} />
-        </div>
+        {/* Si está cargando los productos muestro el mensaje, sino llamo a ItemList con productos */}
+        {cargando ? <h2>Cargando Productos...</h2> : (
+          < div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+            <ItemList items={productos} />
+          </div>
+        )}
       </div>
-    </div>
+    </div >
   )
 }
 
