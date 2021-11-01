@@ -1,6 +1,5 @@
-import Main from './components/Main/Main'
-
 // App contiene un componente Main
+import Main from './components/Main/Main'
 
 function App() {
   return (

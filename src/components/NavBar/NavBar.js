@@ -44,7 +44,7 @@ const NavBar = ({ cantidadItems }) => {
           <CartWidget cantidad={cantidadItems} />
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar >
   )
 }
 

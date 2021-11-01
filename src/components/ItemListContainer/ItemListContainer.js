@@ -4,7 +4,7 @@ import ItemList from './ItemList/ItemList';
 import productos_js from '../productos/productos'
 import { useState, useEffect } from "react"
 
-// Contenedor para mostrar items, actualmente solo muestra un saludo recibido de un componente superior.
+// Contenedor para mostrar items
 const ItemListContainer = ({ greeting }) => {
 
   const stock = 0
@@ -13,7 +13,8 @@ const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([])
   const [cargando, setCargando] = useState(true) //mientras los productos no cargan cargando esta en verdadero
 
-  //Para que se renderize una sola vez hay que aplicarle un array vacío.
+  // Se importan los productos 
+  // Para que se renderize una sola vez hay que aplicarle un array vacío.
   useEffect(() => {
     const productos = () => {
       return new Promise((resolve, reject) => {
@@ -35,16 +36,26 @@ const ItemListContainer = ({ greeting }) => {
         <div className="container justify-content-center display-flex p-2 text-center">
           <h2>{greeting}</h2>
         </div>
+
         <div className="container-fluid d-flex text-center">
           <ItemCount stock={stock} initial={1} />
           <ItemCount stock={stock2} initial={1} />
         </div>
+
         {/* Si está cargando los productos muestro el mensaje, sino llamo a ItemList con productos */}
-        {cargando ? <h2>Cargando Productos...</h2> : (
-          < div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
-            <ItemList items={productos} />
-          </div>
-        )}
+        {cargando ?
+          (
+            <div className="container-fluid row d-flex justify-content-center my-3 text-center">
+              <h2>Cargando Productos...</h2>
+            </div>
+          )
+          :
+          (
+            <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+              <ItemList items={productos} />
+            </div>
+          )
+        }
       </div>
     </div >
   )

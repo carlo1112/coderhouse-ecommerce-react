@@ -1,5 +1,6 @@
 import NavBar from "../NavBar/NavBar"
 import ItemListContainer from "../ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 // Main contiene los componentes NavBar e ItemListContainer
 const Main = () => {
@@ -11,6 +12,7 @@ const Main = () => {
     <main>
       <NavBar cantidadItems={stockCarrito} />
       <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
+      <ItemDetailContainer />
     </main>
   )
 }

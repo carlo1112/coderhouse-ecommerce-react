@@ -1,0 +1,8 @@
+.itemDetailContainer {
+  background-color: burlywood;
+  display: flex;
+  margin-top: 0px;
+  padding: 10px;
+  justify-content: center;    
+  flex-direction: column;
+}
