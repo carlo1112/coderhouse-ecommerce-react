@@ -2,6 +2,7 @@ import './ItemDetailContainer.css';
 import productos_js from '../productos/productos'
 import { useState, useEffect } from "react"
 import ItemDetail from './ItemDetail/ItemDetail'
+import { useParams } from 'react-router';
 
 // Contenedor para mostrar detalle del item
 const ItemDetailContainer = () => {
@@ -9,22 +10,24 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState([])
   const [cargando, setCargando] = useState(true) //mientras el producto no se carga, 'cargando' esta en verdadero
 
+  const { id_producto } = useParams()
+
   //Para que se renderize una sola vez hay que aplicarle un array vacío al final del useEffect.
   useEffect(() => {
     const getItem = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(productos_js)
-        }, 2000)
+        }, 1000)
       })
     }
     getItem()
       .then((prods) => {
-        const item = prods.find((prod => prod.id === 1))
+        const item = prods.find((prod => prod.id === parseInt(id_producto)))
         setProducto(item)
         setCargando(false)
       })
-  }, [])
+  }, [id_producto])
 
   return (
     <div className="itemDetailContainer">
@@ -37,6 +40,7 @@ const ItemDetailContainer = () => {
             <h2>Item Detail</h2>
 
             <ItemDetail
+              key={`detail-${producto.id}`}
               id={producto.id}
               title={producto.marca + ' ' + producto.modelo}
               description={producto.descripcion}

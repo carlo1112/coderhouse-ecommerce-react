@@ -52,7 +52,7 @@ const productos = [
   },
   {
     id: 6,
-    modelo: 'K214',
+    modelo: 'K240',
     marca: 'AKG',
     precio: 25000,
     descripcion: 'Auricular profesional estéreo semi-abierto.',

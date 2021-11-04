@@ -9,12 +9,14 @@ const ItemList = ({ items }) => {
     <>
       {items.map((producto) =>
         <Item
+          key={producto.id}
           id={producto.id}
           title={producto.marca + ' ' + producto.modelo}
           description={producto.descripcion}
           price={producto.precio}
           pictureUrl={producto.img}
           stock={producto.stock}
+        // categoria={producto.categoria}
         />
       )}
     </>

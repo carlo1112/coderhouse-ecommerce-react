@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 const iconCart = <FontAwesomeIcon icon={faShoppingCart} color="white" />
 
@@ -10,7 +12,7 @@ const iconCart = <FontAwesomeIcon icon={faShoppingCart} color="white" />
 const CartWidget = ({ cantidad }) => {
   return (
     <div className="cart_widget">
-      <Container fluid>
+      <Container as={Link} to="/carrito" fluid>
         {iconCart}
         <div className="cantidadCarrito">
           <h5>{cantidad}</h5>
