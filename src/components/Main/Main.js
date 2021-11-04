@@ -24,7 +24,7 @@ const Main = () => {
           <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
         </Route>
 
-        <Route path="/producto/:id_producto" exact>
+        <Route path="/item/:id_item" exact>
           <ItemDetailContainer />
         </Route>
 

@@ -121,6 +121,26 @@ const productos = [
     img: 'https://res.cloudinary.com/carlo1112/image/upload/v1635281068/sonido/samson-bl3_o8uz1d.jpg'
   },
 
+  {
+    id: 13,
+    modelo: 'XR18',
+    marca: 'Behringer',
+    precio: 179000,
+    descripcion: 'Consola digital de mezcla de sonido de 18 canales.',
+    categoria: 'consolas',
+    stock: '4',
+    img: 'https://res.cloudinary.com/carlo1112/image/upload/v1636051442/sonido/xr18-700x500_ys9dwy.jpg'
+  },
+  {
+    id: 14,
+    modelo: 'Resolv A5',
+    marca: 'Samson',
+    precio: 79000,
+    descripcion: 'Par de monitores de estudio activos de respuesta plana.',
+    categoria: 'monitores',
+    stock: '2',
+    img: 'https://res.cloudinary.com/carlo1112/image/upload/v1636051443/sonido/Resolv_A5_700x500_eo27h9.jpg'
+  },
 ]
 
 export default productos

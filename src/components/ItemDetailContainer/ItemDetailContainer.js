@@ -10,24 +10,25 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState([])
   const [cargando, setCargando] = useState(true) //mientras el producto no se carga, 'cargando' esta en verdadero
 
-  const { id_producto } = useParams()
+  const { id_item } = useParams()
 
   //Para que se renderize una sola vez hay que aplicarle un array vacío al final del useEffect.
   useEffect(() => {
     const getItem = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(productos_js)
-        }, 1000)
+          //Se busca el producto que coincida con la busqueda
+          const item_buscado = productos_js.find((prod => prod.id === parseInt(id_item)))
+          resolve(item_buscado)
+        }, 2000)
       })
     }
     getItem()
-      .then((prods) => {
-        const item = prods.find((prod => prod.id === parseInt(id_producto)))
-        setProducto(item)
+      .then((prod) => {
+        setProducto(prod)
         setCargando(false)
       })
-  }, [id_producto])
+  }, [id_item])
 
   return (
     <div className="itemDetailContainer">

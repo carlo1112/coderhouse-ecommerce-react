@@ -17,7 +17,7 @@ const Item = ({ id, title, description, price, pictureUrl, stock, categoria }) =
           <Card.Subtitle className="p-2" style={{ textAlign: "right" }}><strong>$ {price}</strong></Card.Subtitle>
           <Card.Text className="text-center">{description}</Card.Text>
           <Card.Text className="text-muted">Stock disponible: {stock}</Card.Text>
-          <Button variant="primary" as={Link} to={`/producto/${id}`}>Ver detalles</Button>
+          <Button variant="primary" as={Link} to={`/item/${id}`}>Ver detalles</Button>
         </Card.Body>
       </Card>
     </Container>
