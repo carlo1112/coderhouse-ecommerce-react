@@ -1,11 +1,7 @@
 .faq {
-  background-color: burlywood;
   display: flex;
   margin-top: 55px;
   padding: 10px;
   justify-content: center;    
   flex-direction: column;
-  position : absolute;
-	width : 100%;
-	height : auto;
 }

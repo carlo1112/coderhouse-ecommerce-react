@@ -3,6 +3,7 @@ import productos_js from '../productos/productos'
 import { useState, useEffect } from "react"
 import ItemDetail from './ItemDetail/ItemDetail'
 import { useParams } from 'react-router';
+import Cargando from '../Cargando/Cargando';
 
 // Contenedor para mostrar detalle del item
 const ItemDetailContainer = () => {
@@ -16,6 +17,10 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const getItem = () => {
       return new Promise((resolve, reject) => {
+
+        setCargando(true)
+        setProducto([])
+
         setTimeout(() => {
           //Se busca el producto que coincida con la busqueda
           const item_buscado = productos_js.find((prod => prod.id === parseInt(id_item)))
@@ -35,11 +40,12 @@ const ItemDetailContainer = () => {
       <div className="container justify-content-center display-flex p-2 text-center">
 
         {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
-        {cargando ? <h2>Cargando Detalles del Producto...</h2> : (
-          <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
 
-            <h2>Item Detail</h2>
+        <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
 
+          <h2>Item Detail</h2>
+
+          {cargando ? <Cargando /> : (
             <ItemDetail
               key={`detail-${producto.id}`}
               id={producto.id}
@@ -48,10 +54,9 @@ const ItemDetailContainer = () => {
               price={producto.precio}
               pictureUrl={producto.img}
               stock={producto.stock}
-            />
+            />)}
 
-          </div>
-        )}
+        </div>
       </div>
     </div>
   )

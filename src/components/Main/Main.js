@@ -4,9 +4,8 @@ import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 import Faq from "../Faq/Faq"
 import Contacto from "../Contacto/Contacto"
 import Carrito from "../Carrito/Carrito"
-
+import "./Main.css"
 import { Switch, Route } from 'react-router-dom'
-
 
 // Main contiene los componentes NavBar e ItemListContainer
 const Main = () => {
@@ -19,7 +18,6 @@ const Main = () => {
       <NavBar cantidadItems={stockCarrito} />
 
       <Switch>
-
         <Route path="/" exact>
           <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
         </Route>
@@ -44,9 +42,7 @@ const Main = () => {
         <Route path="/carrito" exact>
           <Carrito />
         </Route>
-
       </Switch>
-
     </main>
   )
 }

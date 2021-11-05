@@ -1,6 +1,7 @@
 import CartWidget from '../CartWidget/CartWidget';
 // Se importan componentes de react-bootstrap
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
+import "./NavBar.css"
 
 // Se importan FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

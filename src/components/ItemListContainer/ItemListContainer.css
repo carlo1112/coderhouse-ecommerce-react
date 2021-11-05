@@ -11,9 +11,3 @@
   justify-content:space-around;
   display:grid;  
 }
-
-.cargando {
-  position : absolute;
-	width : 100%;
-	height : 100%;
-}

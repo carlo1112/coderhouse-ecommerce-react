@@ -8,7 +8,6 @@ const Carrito = () => {
         <h2>Soy el carrito</h2>
         <p>Todavía no funciona</p>
       </Container>
-
     </div>
   )
 }
