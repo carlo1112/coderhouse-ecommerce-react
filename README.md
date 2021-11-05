@@ -17,7 +17,7 @@ Fontawesome: [https://fontawesome.com/]
 
 React-Router: [https://v5.reactrouter.com/web/]
 # Instalación
-`npm install react-router-dom`
+`npm install react-router-dom` 
 
 
 ### -------------------------------------------- ###
