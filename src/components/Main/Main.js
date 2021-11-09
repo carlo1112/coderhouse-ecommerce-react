@@ -3,7 +3,7 @@ import ItemListContainer from "../ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 import Faq from "../Faq/Faq"
 import Contacto from "../Contacto/Contacto"
-import Carrito from "../Carrito/Carrito"
+import Cart from "../Cart/Cart"
 import "./Main.css"
 import { Switch, Route } from 'react-router-dom'
 
@@ -22,6 +22,18 @@ const Main = () => {
           <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
         </Route>
 
+        <Route path="/faq" exact>
+          <Faq />
+        </Route>
+
+        <Route path="/contacto" exact>
+          <Contacto />
+        </Route>
+
+        <Route path="/cart" exact>
+          <Cart />
+        </Route>
+
         <Route path="/item/:id_item" exact>
           <ItemDetailContainer />
         </Route>
@@ -31,17 +43,6 @@ const Main = () => {
           <ItemListContainer greeting={""} />
         </Route>
 
-        <Route path="/faq" exact>
-          <Faq />
-        </Route>
-
-        <Route path="/contacto" exact>
-          <Contacto />
-        </Route>
-
-        <Route path="/carrito" exact>
-          <Carrito />
-        </Route>
       </Switch>
     </main>
   )

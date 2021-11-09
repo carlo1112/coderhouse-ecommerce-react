@@ -47,7 +47,7 @@ const ItemListContainer = ({ greeting }) => {
             } else {
               console.log("No tendría que haber entrado acá")
             }
-          }, 2000)
+          }, 500)
         })
       }
     } else {      // Si no se aplican filtros, imprime todos los productos.
@@ -59,7 +59,7 @@ const ItemListContainer = ({ greeting }) => {
 
           setTimeout(() => {
             resolve(productos_js)
-          }, 2000)
+          }, 500)
         })
       }
     }

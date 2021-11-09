@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
           //Se busca el producto que coincida con la busqueda
           const item_buscado = productos_js.find((prod => prod.id === parseInt(id_item)))
           resolve(item_buscado)
-        }, 2000)
+        }, 500)
       })
     }
     getItem()
