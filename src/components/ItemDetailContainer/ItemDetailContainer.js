@@ -37,14 +37,15 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="itemDetailContainer">
-      <div className="container justify-content-center display-flex p-2 text-center">
+      <div className="container-fluid row">
 
         {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
 
         <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
-
           <h2>Item Detail</h2>
+        </div>
 
+        <div className="container-fluid row d-flex justify-content-center my-3 text-center">
           {cargando ? <Cargando /> : (
             <ItemDetail
               key={`detail-${producto.id}`}
@@ -55,10 +56,9 @@ const ItemDetailContainer = () => {
               pictureUrl={producto.img}
               stock={producto.stock}
             />)}
-
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

@@ -9,7 +9,7 @@ const CartItem = ({ id, title, price, pictureUrl, cantidad, subtotal }) => {
 
   return (
     <Container className="">
-      <Card className="" style={{ width: '100%' }}>
+      <Card className="card p-3 bg-light rounded-3" style={{ width: '100%' }}>
         <Row className='no-gutters'>
           <Col className="col-sm"> {/*} md={5} lg={5}>*/}
             <Card.Img className="rounded-3" variant="top" src={pictureUrl} alt={title} style={{ width: "50%" }} />
