@@ -51,10 +51,6 @@ const CartFunction = ({ children }) => {
   }
 
   const remove = (id, cantidad, precio) => {
-    //const pos = cart.findIndex(elemento => elemento.id === id);  // Busco posición del elemento en el carrito
-    //setTotal(total - (cart[pos].precio * cart[pos].cantidad))
-    //cart.splice(pos, 1); -> Elimina el elemento del carrito   
-    //setCart(cart.splice(pos, 1))
     const carritoFiltrado = cart.filter((item) => item.id !== id)
     setCart(carritoFiltrado)
     setTotal(total - (cantidad * precio))

@@ -40,7 +40,6 @@ const ItemDetailContainer = () => {
       <div className="container-fluid row">
 
         {/* Si se esta cargando se muestra el mensaje, sino se muestra el ItemDetail */}
-
         <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
           <h2>Item Detail</h2>
         </div>

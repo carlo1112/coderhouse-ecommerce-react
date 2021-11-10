@@ -14,7 +14,6 @@ const CartWidget = ({ cantidad }) => {
 
   const { unidades } = useContext(Context)
 
-
   return (
     <div className="cart_widget">
       <Container as={Link} to="/cart" fluid>
@@ -25,10 +24,8 @@ const CartWidget = ({ cantidad }) => {
               <h5>{unidades}</h5>
             </div>
           )
-          :
-          <></>
+          : <></>
         }
-
       </Container>
     </div>
   )
