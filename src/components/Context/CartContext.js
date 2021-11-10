@@ -25,12 +25,9 @@ const CartFunction = ({ children }) => {
         }
         ]
       )
-      console.log(cart)
-      console.log(`subtotal: ${producto.price * cantidad}`)
       setUnidades(unidades + 1) // agrego un producto y la cantidad de ese producto
       setTotal(total + (producto.price * cantidad))
 
-      console.log(`Producto en carrito, ${producto.cantidad}, ${cantidad}, ${total}`)
     } else {
       // Actualizo el item
       const cartAux = cart.map((item) => {

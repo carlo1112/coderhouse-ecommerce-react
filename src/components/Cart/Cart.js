@@ -8,7 +8,6 @@ import { Link } from "react-router-dom"
 const Cart = () => {
 
   const { cart, total, clear } = useContext(Context)
-  //const { total } = useContext(Context)
 
   return (
     <div className="cart">
