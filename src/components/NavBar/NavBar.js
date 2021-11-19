@@ -45,7 +45,7 @@ const NavBar = ({ cantidadItems }) => {
             <Nav.Link as={Link} to="/faq">Preguntas Frecuentes</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
           </Nav>
-          <CartWidget cantidad={cantidadItems} />
+          <CartWidget />
         </Navbar.Collapse>
       </Container>
     </Navbar >

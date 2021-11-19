@@ -19,6 +19,9 @@ React-Router: [https://v5.reactrouter.com/web/]
 # Instalación
 `npm install react-router-dom` 
 
+Firebase [https://firebase.google.com/]
+# Instalación
+`npm install firebase@8.9.1`
 
 ### -------------------------------------------- ###
 

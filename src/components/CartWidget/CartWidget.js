@@ -10,7 +10,7 @@ import { Context } from '../Context/CartContext';
 const iconCart = <FontAwesomeIcon icon={faShoppingCart} color="white" />
 
 // El componente CartWidget contiene un icono de carrito y un numero que muestra un valor recibido de un componente superior.
-const CartWidget = ({ cantidad }) => {
+const CartWidget = () => {
 
   const { unidades } = useContext(Context)
 

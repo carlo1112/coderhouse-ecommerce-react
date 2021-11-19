@@ -1,17 +1,16 @@
 import './ItemListContainer.css';
-// import ItemCount from '../ItemCount/ItemCount';
 import ItemList from './ItemList/ItemList';
-import productos_js from '../productos/productos'
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom';
 import Cargando from '../Cargando/Cargando';
+import { getFirestore } from '../Firebase/Firebase';
 
 // Contenedor para mostrar items
 const ItemListContainer = ({ greeting }) => {
 
   const [productos, setProductos] = useState([])
   const [cargando, setCargando] = useState(true)    //mientras los productos no cargan cargando esta en verdadero
-  const { filtro, id_filtro } = useParams()
+  const { filtro, id_filtro } = useParams()         //filtro de categorias
 
   // Funcion para vacíar el array de productos y poner "cargando" en true
   const inicializar = () => {
@@ -25,50 +24,44 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
 
-    // Si id_filtro no es null, se filtra por categoria o marca.
-    let productos_promesa
     if (id_filtro != null) {
 
-      productos_promesa = () => {
-        return new Promise((resolve, reject) => {
+      inicializar()
 
-          inicializar()
+      // Se filtra por "categoria" o "marca".
+      if (filtro === "categoria") {
 
-          setTimeout(() => {
-            // Se filtra por "categoria" o "marca".
-            if (filtro === "categoria") {
+        const dbQuery = getFirestore()
+        dbQuery.collection('productos').where('categoria', '==', id_filtro).get()
+          .then(resp => {
+            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+          })
+          .catch(err => console.log(err))
+          .finally(() => setCargando(false))
 
-              const productosPorCategoria = productos_js.filter(producto => producto.categoria === id_filtro)
-              resolve(productosPorCategoria)
-            } else if (filtro === "marca") {
+      } else if (filtro === "marca") {
 
-              const productosPorMarca = productos_js.filter(producto => producto.marca === id_filtro)
-              resolve(productosPorMarca)
-            } else {
-              console.log("No tendría que haber entrado acá")
-            }
-          }, 500)
-        })
+        const dbQuery = getFirestore()
+        dbQuery.collection('productos').where('marca', '==', id_filtro).get()
+          .then(resp => {
+            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+          })
+          .catch(err => console.log(err))
+          .finally(() => setCargando(false))
+      } else {
+        console.log("No tendría que haber entrado acá")
       }
-    } else {      // Si no se aplican filtros, imprime todos los productos.
 
-      productos_promesa = () => {
-        return new Promise((resolve, reject) => {
+    } else {  // Si no se aplican filtros, imprime todos los productos.
 
-          inicializar()
-
-          setTimeout(() => {
-            resolve(productos_js)
-          }, 500)
+      const dbQuery = getFirestore()
+      dbQuery.collection('productos').get()
+        .then(resp => {
+          setProductos(resp.docs.map(producto => ({ id: producto.id, ...producto.data() })))
         })
-      }
+        .catch(err => console.log(err))
+        .finally(() => setCargando(false))
     }
-
-    productos_promesa()
-      .then((prods) => {
-        setProductos(prods)
-        setCargando(false)
-      })
   }, [filtro, id_filtro]) //aca tengo que hacer el pasaje en el [] array vacio para que no se borren las variables.
 
   return (
