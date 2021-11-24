@@ -22,7 +22,7 @@
 ## Firebase [https://firebase.google.com/]
 ### Instalación `npm install firebase@8.9.1`
 
-### -------------------------------------------- ###
+#
 
 
 # Getting Started with Create React App
