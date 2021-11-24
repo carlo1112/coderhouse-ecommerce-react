@@ -15,7 +15,11 @@ const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig)
 
+// Funcion para usar firestore
 export function getFirestore() {
-  //para usar firestore
   return firebase.firestore(app)
+}
+
+export function formatDate(date) {
+  return firebase.firestore.Timestamp.fromDate(date)
 }
