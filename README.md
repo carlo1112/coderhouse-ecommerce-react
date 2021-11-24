@@ -1,5 +1,5 @@
-# Proyecto en desarrollo por Carlos Cattaneo 
-## curso de React JS de CoderHouse, comisión 16975
+Proyecto en desarrollo por Carlos Cattaneo 
+## Curso de React JS de CoderHouse, comisión 16975
 
 #
 
