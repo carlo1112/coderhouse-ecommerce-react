@@ -1,27 +1,26 @@
-# Proyecto en desarrollo por Carlos Cattaneo para el curso de React JS de CoderHouse
+# Proyecto en desarrollo por Carlos Cattaneo para el curso de React JS de CoderHouse, comisión 16975
 
-# Para este proyecto (Sonido Codeado) se incorporó:
+## Para este proyecto (Sonido Codeado) se incorporó:
 
-React-Bootstrap: [https://react-bootstrap.github.io/]
-# Instalación:
+## React-Bootstrap: [https://react-bootstrap.github.io/]
+### Instalación:
 `npm install bootstrap react-bootstrap` 
 `import 'bootstrap/dist/css/bootstrap.min.css'`
 
 
-Fontawesome: [https://fontawesome.com/]
-# Instalación:
+## Fontawesome: [https://fontawesome.com/]
+### Instalación:
 `npm i --save @fortawesome/fontawesome-svg-core`
 `npm install --save @fortawesome/free-solid-svg-icons`
 `npm install --save @fortawesome/react-fontawesome`
 `npm install --save @fortawesome/free-brands-svg-icons`
 
-React-Router: [https://v5.reactrouter.com/web/]
-# Instalación
+## React-Router: [https://v5.reactrouter.com/web/]
+### Instalación: 
 `npm install react-router-dom` 
 
-Firebase [https://firebase.google.com/]
-# Instalación
-`npm install firebase@8.9.1`
+## Firebase [https://firebase.google.com/]
+### Instalación `npm install firebase@8.9.1`
 
 ### -------------------------------------------- ###
 
