@@ -21,10 +21,10 @@ const Cart = () => {
       email: "email@test.com",
       telefono: "44445555",
     }
-    const cartItems = cart.map((cart) => ({
-      id: cart.id,
-      title: cart.nombre,
-      quantity: cart.cantidad
+    const cartItems = cart.map((item) => ({
+      id: item.id,
+      title: item.nombre,
+      quantity: item.cantidad
     }))
     await newOrder(cartItems, user)
     setLoading(false);
@@ -55,22 +55,22 @@ const Cart = () => {
     return (
       <>
         {
-          cart.map((producto) =>
+          cart.map((item) =>
             <CartItem
-              key={`cart-${producto.id}`}
-              id={producto.id}
-              title={producto.nombre}
-              price={producto.precio}
-              pictureUrl={producto.imagen}
-              cantidad={producto.cantidad}
-              subtotal={producto.subtotal}
+              key={`cart-${item.id}`}
+              id={item.id}
+              title={item.nombre}
+              price={item.precio}
+              pictureUrl={item.imagen}
+              cantidad={item.cantidad}
+              subtotal={item.subtotal}
             />
           )
         }
         < h2 > Total del carrito: ${total}</h2 >
         <Container>
           <Button variant="danger" onClick={() => clear()}>Vaciar carrito</Button>
-          <Button variant="primary" onClick={() => createOrder()}>Finalizar Compra(implementando)</Button>
+          <Button variant="primary" onClick={() => createOrder()}>Finalizar Compra</Button>
         </Container>
       </>
 

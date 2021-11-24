@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const iconSlider = <FontAwesomeIcon icon={faSlidersH} />
 
 // NavBar genera el menú Navbar que a su vez contiene al componente CartWidget
-const NavBar = ({ cantidadItems }) => {
+const NavBar = () => {
   return (
     <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
       <Container>
