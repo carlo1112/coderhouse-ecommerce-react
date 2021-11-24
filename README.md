@@ -1,5 +1,5 @@
 # Proyecto en desarrollo por Carlos Cattaneo 
-## Curso de React JS de CoderHouse, comisión 16975
+Realizado en curso de React JS de CoderHouse, comisión 16975
 
 **Para este proyecto (Sonido Codeado) se incorporó:**
 
