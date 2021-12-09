@@ -1,40 +1,58 @@
 import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "../../ItemCount/ItemCount"
-import { Context } from "../../Context/CartContext"
-import { Container, Card, Button } from "react-bootstrap"
+import { CartContext } from "../../Context/CartContext"
+import { Container, Card, Button, Col, Image } from "react-bootstrap"
+import Modals from "../../Modals/Modals"
+import "./ItemDetail.css"
 
-const ItemDetail = ({ id, title, description, price, pictureUrl, stock }) => {
+const ItemDetail = ({ id, title, description, price, pictureUrl, stock, category }) => {
 
-  const [seAgrego, setSeAgrego] = useState(false)
-  const { onAdd } = useContext(Context)
+  const [isAdded, setIsAdded] = useState(false)
+  const { onAdd } = useContext(CartContext)
+  const categoryUpperFirstLetter = category ? category.charAt(0).toUpperCase() + category.slice(1) : '' // Category is lowercase, the first letter is converted to uppercase and saved in a new variable
 
-  const agregar = (props) => {
-    setSeAgrego(true)
-    onAdd({ id, title, price, pictureUrl }, props.cantidad) //producto, cantidad
-    console.log(`Se agregaron ${props.cantidad} unidades del producto ${title} al carrito`)
+  const [message, setMessage] = useState('')
+  const [showModal, setShowModal] = useState(false);
+
+  const addToCart = (props) => {
+    setIsAdded(true)
+    onAdd({ id, title, price, pictureUrl }, props.quantity) //product, quantity
+    setMessage(`Se agregaron ${props.quantity} unidades del producto ${title} al carrito`)
+    setShowModal(true)
   }
 
   return (
     <Container className="col-12 col-md-12 col-lg-12 d-flex justify-content-center my-3">
-      <Card className="card p-3 bg-light rounded-3">
-        <Card.Img className="rounded-3" variant="top" src={pictureUrl} alt={title} style={{ width: "100%" }} />
+      {showModal ? <Modals mostrar={showModal} text={message} /> : <></>}
+
+      <Card style={{ heigth: "20rem" }} className="card p-3 bg-light rounded-3">
         <Card.Body>
-          <Card.Title className="text-center">{title}</Card.Title>
-          <Card.Subtitle className="p-2" style={{ textAlign: "right" }}><strong>$ {price}</strong></Card.Subtitle>
-          <Card.Text className="text-center">{description}</Card.Text>
+          <Col>
+            <Container>
+              <Image className="card-image rounded-3" src={pictureUrl} alt={title} />
+            </Container>
+          </Col>
+          <Col>
+            <Card.Title className="text-center">{title}</Card.Title>
+            <Card.Subtitle className="p-2" style={{ textAlign: "center" }}><strong>{categoryUpperFirstLetter}</strong></Card.Subtitle>
+            <Card.Subtitle className="p-2" style={{ textAlign: "center" }}><strong>$ {price}</strong></Card.Subtitle>
+            <Card.Text className="text-center">{description}</Card.Text>
 
-          {!seAgrego ?
-            <ItemCount onAdd={agregar} stock={stock} initial={1} />
-            :
-            <div className="container d-flex justify-content-center">
-              <Button as={Link} to='/cart' className="col-4" variant="primary">Terminar compra</Button>
-            </div>
-          }
+            {!isAdded ?
+              <ItemCount onAdd={addToCart} stock={stock} initial={1} />
+              :
+              <Container className="">
+                <Container className="justify-content-center display-flex col-12 p-2">
+                  <Button as={Link} to='/cart' className="col-4" variant="primary">Terminar compra</Button>
+                </Container>
+              </Container>
+            }
 
-          <Button as={Link} to={'/'} variant="primary">Volver</Button>
+            <div className="back-button"><Button as={Link} to={'/'} variant="primary">Volver</Button></div>
+          </Col>
         </Card.Body>
-      </Card>
+      </Card >
     </Container >
   )
 }

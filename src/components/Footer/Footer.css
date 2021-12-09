@@ -1,0 +1,28 @@
+.footer {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0em 3em;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0; 
+}
+
+.footer-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: .5;
+  color: #ffffff;
+}
+
+.footer #copyright a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footer #copyright a:hover{
+   color: rgb(173, 173, 173)
+}

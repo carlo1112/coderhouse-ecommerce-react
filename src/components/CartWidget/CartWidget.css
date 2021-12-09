@@ -4,7 +4,7 @@
   display:inline;
 }
 
-.cantidadCarrito {
+.cartQuantity {
     background-color: #F44336;
     color: white;
     border-radius: 50%;
@@ -17,7 +17,7 @@
     left: -5px;
 }
 
-.cantidadCarrito h5 {
+.cartQuantity h5 {
   font-size: 12px !important;
   line-height: 19px;
 }

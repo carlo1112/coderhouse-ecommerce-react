@@ -2,78 +2,69 @@ import './ItemListContainer.css';
 import ItemList from './ItemList/ItemList';
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom';
-import Cargando from '../Cargando/Cargando';
-import { getFirestore } from '../Firebase/Firebase';
+import Loading from '../Loading/Loading';
+import { db } from '../Firebase/Firebase';
 
 // Contenedor para mostrar items
 const ItemListContainer = ({ greeting }) => {
 
-  const [productos, setProductos] = useState([])
-  const [cargando, setCargando] = useState(true)    //mientras los productos no cargan cargando esta en verdadero
-  const { filtro, id_filtro } = useParams()         //filtro de categorias
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)  // While products are loading, "loading" is true
+  const { filter, id_filter } = useParams()     // Category filter
 
-  // Funcion para vacíar el array de productos y poner "cargando" en true
-  const inicializar = () => {
-    setCargando(true);
-    setProductos([]);
+  // Function to empty the product array and set "loading" to true
+  const initialize = () => {
+    setLoading(true);
+    setProducts([]);
   }
 
-  // Se importan los productos 
-  // Para que se renderize una sola vez y no se genere un loop, hay que aplicarle un array vacío.
-  // Se agregan las variables al array vacío que tienen que ser monitoreadas constantemente.
+  // Products are imported from Firebase
+  // To render it only once and not generate a loop, an empty array must be applied to it.
+  // Variables are added to the empty array that have to be constantly monitored.
 
   useEffect(() => {
+    if (id_filter != null) {
+      initialize()
 
-    if (id_filtro != null) {
-
-      inicializar()
-
-      // Se filtra por "categoria" o "marca".
-      if (filtro === "categoria") {
-
-        const dbQuery = getFirestore()
-        dbQuery.collection('productos').where('categoria', '==', id_filtro).get()
+      // It's filtered by "category" or "brand".
+      if (filter === "category") {
+        db.collection('products').where('category', '==', id_filter).get()
           .then(resp => {
-            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+            setProducts(resp.docs.map(item => ({ id: item.id, ...item.data() })))
           })
           .catch(err => console.log(err))
-          .finally(() => setCargando(false))
+          .finally(() => setLoading(false))
 
-      } else if (filtro === "marca") {
-
-        const dbQuery = getFirestore()
-        dbQuery.collection('productos').where('marca', '==', id_filtro).get()
+      } else if (filter === "brand") {
+        db.collection('products').where('brand', '==', id_filter).get()
           .then(resp => {
-            setProductos(resp.docs.map(productos => ({ id: productos.id, ...productos.data() })))
+            setProducts(resp.docs.map(item => ({ id: item.id, ...item.data() })))
           })
           .catch(err => console.log(err))
-          .finally(() => setCargando(false))
+          .finally(() => setLoading(false))
       } else {
         console.log("No tendría que haber entrado acá")
       }
-
-    } else {  // Si no se aplican filtros, imprime todos los productos.
-
-      const dbQuery = getFirestore()
-      dbQuery.collection('productos').get()
+    } else {  // If no filters are applied, all products are printed.
+      db.collection('products').get()
         .then(resp => {
-          setProductos(resp.docs.map(producto => ({ id: producto.id, ...producto.data() })))
+          setProducts(resp.docs.map(item => ({ id: item.id, ...item.data() })))
         })
         .catch(err => console.log(err))
-        .finally(() => setCargando(false))
+        .finally(() => setLoading(false))
     }
-  }, [filtro, id_filtro]) //aca tengo que hacer el pasaje en el [] array vacio para que no se borren las variables.
+  }, [filter, id_filter])
 
   return (
     <div className="itemListContainer">
-      <div className="container-fluid row">
+      <div className="container-fluid">
         <div className="container justify-content-center display-flex p-2 text-center">
-          {(greeting !== "") ? <h2>{greeting}</h2> : <h2>{`Filtro: ${filtro} - ${id_filtro}`}</h2>}
+          {(greeting !== "") ? <h2>{greeting}</h2> : <h2>{`Filtro: ${filter} - ${id_filter}`}</h2>}
         </div>
 
-        {/* Si está cargando los productos muestro el mensaje, sino llamo a ItemList con productos */}
-        <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
-          {cargando ? (<Cargando />) : <ItemList items={productos} />}
+        {/* Si está loading los products muestro el mensaje, sino llamo a ItemList con products */}
+        <div className="container-fluid row d-flex justify-content-center my-3 text-center cardProducts">
+          {loading ? (<Loading />) : <ItemList items={products} />}
         </div>
       </div>
     </div >

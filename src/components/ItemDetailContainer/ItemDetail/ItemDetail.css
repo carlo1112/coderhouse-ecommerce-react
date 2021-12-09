@@ -1,0 +1,19 @@
+.itemDetailContainer .card-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemDetailContainer .card-body > div {
+  width: 50%;
+  position:relative;
+}
+
+.itemDetailContainer .card-image {
+  width: 100%;
+}
+
+.itemDetailContainer .back-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

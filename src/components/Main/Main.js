@@ -1,25 +1,27 @@
-import NavBar from "../NavBar/NavBar"
+import { Switch, Route } from 'react-router-dom'
 import ItemListContainer from "../ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
 import Faq from "../Faq/Faq"
-import Contacto from "../Contacto/Contacto"
+import Contact from "../Contact/Contact"
 import Cart from "../Cart/Cart"
 import "./Main.css"
-import { Switch, Route } from 'react-router-dom'
+import Login from "../Login/Login"
+import Register from "../Register/Register"
+import { useAuth } from '../Context/AuthContext'
+import Footer from '../Footer/Footer'
 
-// Main contiene los componentes NavBar e ItemListContainer
 const Main = () => {
-  // Se crean dos constantes para pasar sus valores como props a los componentes correspondientes
-  const user = "Charly";
-  //const stockCarrito = 5;
-
+  const { loggedUser } = useAuth()
+  const userName = loggedUser ? loggedUser.name : ''
   return (
     <main>
-      <NavBar />
-
       <Switch>
+
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+
         <Route path="/" exact>
-          <ItemListContainer greeting={`¡Bienvenido ${user} a Sonido Codeado!`} />
+          <ItemListContainer greeting={`¡Bienvenido ${userName} a Sonido Codeado!`} />
         </Route>
 
         <Route path="/faq" exact>
@@ -27,23 +29,25 @@ const Main = () => {
         </Route>
 
         <Route path="/contacto" exact>
-          <Contacto />
+          <Contact />
         </Route>
 
         <Route path="/cart" exact>
-          <Cart />
+          <Cart loggedUser={loggedUser} />
         </Route>
 
         <Route path="/item/:id_item" exact>
           <ItemDetailContainer />
         </Route>
 
-        {/* Acá le puede llegar el valor /categoria/'categoria' o /marca/'marca' */}
-        <Route path="/:filtro/:id_filtro" exact>
+        {/* /category/'category' or /brand/'brand' */}
+        <Route path="/:filter/:id_filter" exact>
           <ItemListContainer greeting={""} />
         </Route>
 
       </Switch>
+
+      <Footer />
     </main>
   )
 }

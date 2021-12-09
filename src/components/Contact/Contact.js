@@ -1,9 +1,9 @@
-import "./Contacto.css"
+import "./Contact.css"
 import { Container } from "react-bootstrap"
 
-const Contacto = () => {
+const Contact = () => {
   return (
-    <div className="contacto">
+    <div className="contact">
       <Container className="container align-top justify-content-center p-2 text-center ">
         <h2>Contacto</h2>
         <p>¿Usted está seguro de que quiere contactarse con nosotros?.</p>
@@ -12,4 +12,4 @@ const Contacto = () => {
   )
 }
 
-export default Contacto
+export default Contact

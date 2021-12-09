@@ -1,11 +1,11 @@
-// Se importa React y ReactDOM
+// React and ReactDOM are imported
 import React from "react"
 import ReactDOM from "react-dom"
 import App from './App';
-// Se importa libreria de react-bootstrap
+// React-bootstrap library is imported
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Se renderiza 
+// Render 
 ReactDOM.render(
   <React.StrictMode>
     <App />

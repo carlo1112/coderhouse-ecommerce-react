@@ -1,7 +1,60 @@
 .cart {
+  background-color: burlywood;
   display: flex;
   margin-top: 55px;
   padding: 10px;
   justify-content: center;    
   flex-direction: column;
+}
+
+
+.cart-table{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.body-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-table, .item-table {
+  display: flex;
+  flex-direction: row;
+}
+.header-table {
+  border-bottom: 3px #e6e6e6 solid;
+  padding: 10px 10px;
+}
+
+.item-table {
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px #e6e6e6 solid;
+}
+
+.item-table div:nth-child(2) {
+  padding-left: 10px;
+}
+
+.item-table:nth-child(even) {background: #CCC}
+.item-table:nth-child(odd) {background: #FFF}
+
+
+.cart-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-actions {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-actions .container button{
+ margin-right: 12px;
 }

@@ -1,43 +1,41 @@
 import { useContext } from "react"
-import { Context } from "../Context/CartContext"
-import { Container, Card, Button, Row, Col } from "react-bootstrap"
+import { CartContext } from "../Context/CartContext"
+import { Card, Button } from "react-bootstrap" //, Row, Col, Container
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+// FontAwesome is imported
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { fasTrash } from '@fortawesome/free-solid-svg-icons'
 
-const CartItem = ({ id, title, price, pictureUrl, cantidad, subtotal }) => {
+// iconSlider is created for the brand icon
+const iconTrash = <FontAwesomeIcon icon={faTrash} />
 
-  const { remove } = useContext(Context)
+const CartItem = ({ id, title, price, description, pictureUrl, quantity, subtotal }) => {
+
+  const { remove } = useContext(CartContext)
 
   return (
-    <Container className="">
-      <Card className="card p-3 bg-light rounded-3" style={{ width: '100%' }}>
-        <Row className='no-gutters'>
-          <Col className="col-sm"> {/*} md={5} lg={5}>*/}
-            <Card.Img className="rounded-3" variant="top" src={pictureUrl} alt={title} style={{ width: "50%" }} />
-          </Col>
-          <Col className="col-lg">
-            <Card.Body>
-              <Row>
-                <Container className="col align-self-start">
-                  <Card.Title>{title}</Card.Title>
-                </Container>
-              </Row>
-              <Row>
-                <Col className="col-sm" >
-                  <Card.Text>Precio unitario</Card.Text>
-                  <Card.Text className="p-2">$ {price}</Card.Text>
-                  <Card.Text className="text-muted">Cantidad: {cantidad}</Card.Text>
-                </Col>
-                <Col className="col-sm">
-                  <Card.Text>Subtotal</Card.Text>
-                  <Card.Text className="p-2"><strong>$ {subtotal}</strong></Card.Text>
-                  <Button variant="danger" onClick={() => remove(id, cantidad, price)}>Eliminar producto</Button>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Col>
-        </Row>
-      </Card>
-    </Container>
+    <>
+      <div className="col-1 cartItemImg">
+        <Card.Img className="rounded-3 cardImg" variant="top" src={pictureUrl} alt={title} style={{ maxHeight: "50%", display: "block" }} />
+      </div>
+      <div className="col-4" style={{ textAlign: "left" }}>
+        <Card.Title >{title}</Card.Title>
+        <Card.Text className="text-muted">{description}</Card.Text>
+      </div>
+      <div className="col-2">
+        <Card.Text className="p-2">$ {price}</Card.Text>
+      </div>
+      <div className="col-2">
+        <Card.Text className="text-muted">{quantity}</Card.Text>
+      </div>
+      <div className="col-2">
+        <Card.Text className="p-2"><strong>$ {subtotal}</strong></Card.Text>
+      </div>
+      <div className="col-1">
+        <Button variant="danger" onClick={() => remove(id, quantity, price)}>{iconTrash}</Button>
+      </div>
+    </>
   )
 }
 
