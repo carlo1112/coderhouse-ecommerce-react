@@ -15,10 +15,10 @@ const UserNav = () => {
             (
               <>
                 <div>{loggedUser.name}</div>
-                <Button className="btn btn-link btn-anchor" onClick={signOut}>Logout</Button>
+                <Button className="btn btn-link btn-anchor" onClick={signOut}>Cerrar sesión</Button>
               </>
             ) : (
-              <Button className="btn btn-link btn-anchor login" as={Link} to={`/login`}>Login</Button>
+              <Button className="btn btn-link btn-anchor login" as={Link} to={`/login`}>Ingresar</Button>
             )
         }
       </div>

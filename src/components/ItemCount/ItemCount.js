@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Container, Button, Card } from 'react-bootstrap'
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, onChange }) => {
 
   //If stock is greater than 0, initial is set to 1, if not 0.
   const [stockItem, setStockItem] = useState(stock > 0 ? stock - initial : 0)
@@ -10,7 +10,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const modifyStock = {
     sumarStock: () => {
       if (stockItem === 0) {
-        alert("No hay más stock.")
+        //alert("No hay más stock.")
+        onChange("No hay más stock.")
       } else {
         setQuantity(quantity + 1)
         setStockItem(stockItem - 1)
@@ -18,7 +19,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     },
     restarStock: () => {
       if (quantity === 0) {
-        alert("No se pueden seleccionar cantidades negativas.")
+        //alert("No se pueden seleccionar cantidades negativas.")
+        onChange("No se pueden seleccionar cantidades negativas.")
       } else {
         setQuantity(quantity - 1)
         setStockItem(stockItem + 1)

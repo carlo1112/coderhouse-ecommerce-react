@@ -15,6 +15,11 @@ const ItemDetail = ({ id, title, description, price, pictureUrl, stock, category
   const [message, setMessage] = useState('')
   const [showModal, setShowModal] = useState(false);
 
+  const showModalLimit = (messageText) => {
+    setMessage(messageText)
+    setShowModal(true)
+  }
+
   const addToCart = (props) => {
     setIsAdded(true)
     onAdd({ id, title, price, pictureUrl }, props.quantity) //product, quantity
@@ -40,7 +45,7 @@ const ItemDetail = ({ id, title, description, price, pictureUrl, stock, category
             <Card.Text className="text-center">{description}</Card.Text>
 
             {!isAdded ?
-              <ItemCount onAdd={addToCart} stock={stock} initial={1} />
+              <ItemCount onAdd={addToCart} onChange={showModalLimit} stock={stock} initial={1} />
               :
               <Container className="">
                 <Container className="justify-content-center display-flex col-12 p-2">

@@ -23,34 +23,34 @@ function Login() {
   return (
     <div className="outer">
       <div className="inner">
-        <h3>Log in</h3>
+        <h3>Ingresar</h3>
         <div className="form-group">
           <label>Email</label>
           <input type="email"
             className="form-control"
-            placeholder="Enter email"
+            placeholder="Ingresar email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form-group mt-3">
-          <label>Password</label>
+          <label>Contraseña</label>
           <input type="password"
             className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password" />
+            placeholder="Ingresar contraseña" />
         </div>
         <button
           className="btn btn-primary btn-sm btn-block"
           onClick={() => login(email, password)}>
-          Login
+          Ingresar
         </button>
         <button className="btn btn-secondary btn-sm btn-block" onClick={loginWithGoogle}>
-          Login with Google
+          Ingresar con Google
         </button>
         <div className="mt-3">
-          Don't have an account? <Link to="/register">Register</Link> now.
+          ¿No tenés una cuenta? <Link to="/register">Crear cuenta</Link> ahora.
         </div>
       </div>
     </div>

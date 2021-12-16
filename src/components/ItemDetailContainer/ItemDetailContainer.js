@@ -50,9 +50,9 @@ const ItemDetailContainer = () => {
     <div className="itemDetailContainer">
       <div className="container-fluid row">
 
-        <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
+        {/* <div className="container-fluid row d-flex justify-content-center my-3 text-center tarjetasProductos">
           <h2>Item Detail</h2>
-        </div>
+        </div> */}
 
         <div className="container-fluid row d-flex justify-content-center my-3 text-center">
 

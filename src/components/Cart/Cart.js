@@ -19,6 +19,8 @@ const Cart = () => {
   const [showForm, setShowForm] = useState(false)
   const { loggedUser } = useAuth()
 
+  // console.log("logged: ", loggedUser)
+
   //Modal
   const [message, setMessage] = useState('')
   const [showModal, setShowModal] = useState(false);
@@ -140,7 +142,11 @@ const Cart = () => {
         <FormCart onChange={updateUserInfo} />
         <Container className="d-flex flex-row justify-content-center">
           <Button className="m-2" variant="primary" onClick={() => setShowForm(false)}>Volver al carrito</Button>
-          <Button className="m-2" variant="primary" disabled={false} onClick={() => createOrder()}>Finalizar Compra</Button>
+          {(loggedUser === null || loggedUser === undefined) ?
+            <Button className="m-2" variant="primary" disabled={userInfo ? false : true} onClick={() => createOrder()}>Finalizar Compra</Button>
+            :
+            <Button className="m-2" variant="primary" disabled={false} onClick={() => createOrder()}>Finalizar Compra</Button>
+          }
         </Container>
       </div>
     )

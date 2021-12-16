@@ -14,7 +14,7 @@ const Register = () => {
   const history = useHistory();
 
   const register = () => {
-    if (!name) alert("Please enter name");
+    if (!name) alert("Ingrese su nombre");
     createWithEmailAndPassword(name, email, password);
   };
 
@@ -26,14 +26,14 @@ const Register = () => {
   return (
     <div className="outer">
       <div className="inner">
-        <h3>Register</h3>
+        <h3>Crear cuenta</h3>
         <div className="form-group">
-          <label>Name</label>
+          <label>Nombre</label>
           <input type="text"
             className="form-control"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Full Name"
+            placeholder="Nombre completo"
           />
         </div>
         <div className="form-group">
@@ -51,18 +51,18 @@ const Register = () => {
             className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password" />
+            placeholder="Contraseña" />
         </div>
         <button
           className="btn btn-primary btn-sm btn-block"
           onClick={register}>
-          Register
+          Crear
         </button>
         <button className="btn btn-secondary btn-sm btn-block" onClick={loginWithGoogle}>
-          Register with Google
+          Crear con Google
         </button>
         <div className="mt-3">
-          Already have an account? <Link to="/">Login</Link> now.
+          ¿Ya tenés una cuenta? <Link to="/">Ingresá</Link> ahora.
         </div>
       </div>
     </div>

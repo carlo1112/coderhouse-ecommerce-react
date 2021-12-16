@@ -30,9 +30,9 @@ Realizado en curso de React JS de CoderHouse, comisión 16975
 # **Sonido Codeado, Ecommerce - React.js**
 # *Curso de React JS de CoderHouse*
 ### **Desarrollo por Carlos Cattaneo**
-[![Contact Me]](mailto:carlo1112@gmail.com)
-[![LinkedId]](https://www.linkedin.com/in/carlo1112/)
-[![GitHub Profile](https://github.com/carlo1112)
+*Contacto: [carlo1112@gmail.com]*
+*LinkedIn: [https://www.linkedin.com/in/carlo1112/]*
+*GitHub: [https://github.com/carlo1112]*
 
 # *Información del proyecto:*
 
@@ -52,40 +52,60 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 - [React-Router](https://v5.reactrouter.com/web/)
 - [Fontawesome](https://fontawesome.com/)
 
-<!-- # *Sobre el flujo de compra:*
+# *Sobre el flujo de compra:*
 
-- [![Gif](https://img.shields.io/badge/Gif-informational?style=for-the-badge&logoColor=fff&color=23272d)](public/flujo-compra.gif)
+# Gif del sitio
+
+_Dinámica de funcionamiento del sitio:_
+
+![gif](https://res.cloudinary.com/carlo1112/image/upload/v1639685266/sonidocodeado-paginaejemplo/SonidoCodeado-Funcionamiento_rgwoob.gif)
 
 
 **Screenshots:**
 
-### 1. Home:
-## ![](public/images/flujo-compra/home.png)
+### 1. Inicio:
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679459/sonidocodeado-paginaejemplo/01_lzkgwr.png)
 
-### 2. Detalle del producto seleccionado:
+### 2. Detalle del producto:
 
-## ![](public/images/flujo-compra/detalle-producto.png)
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679459/sonidocodeado-paginaejemplo/02_ebdyy1.png)
 
 ### 3. Carrito de compras, con productos seleccionados:
 
-## ![](public/images/flujo-compra/carrito-compra.png)
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679473/sonidocodeado-paginaejemplo/03_tvkf1c.png)
 
-### 4. Carrito de compras, con productos y formulario completo:
+### 4. Continuar compra con usuario loggeado:
 
-## ![](public/images/flujo-compra/carrito-compra-final.png)
-### 5. Fin de la compra y mensaje al usuario:
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679448/sonidocodeado-paginaejemplo/04_sb1bbu.png)
 
-## ![](public/images/flujo-compra/carrito-compra-final-mensaje.png)
+### 5. Continuar compra sin usuario, completar formulario:
+
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679447/sonidocodeado-paginaejemplo/05_n9sj4l.png)
 
 ### 6. Si no hay productos en el carrito:
 
 ## ![](public/images/flujo-compra/carrito-vacio.png)
 # *Flujo de Compra - Descripción*
-  
-Para poder comprar uno o más productos, se debe seleccionar desde el Home, en la galería de productos, "COMPRAR" A partir de ahí, ya en la vista de detalle del producto, se debe seleccionar su cantidad para añadirlo al carrito. Para que se habilite el botón de agregar al carrito, debe haber al menos un producto seleccionado. No se permite restar unidades inferiores a cero ni tampoco superar el stock disponible.
-Para agregar más productos al carrito, se puede volver al home para seguir sumando productos, que a la vez, de seleccionar el mismo, no se duplica en el carrito, sino que se agrega a la cantidad anteriormente seleccionada.
-Una vez seleccionados los productos a comprar, el botón "Terminar compra" lleva al carrito con el o los productos seleccionados. De querer eliminar alguno, cada uno tiene su propio botón de eliminar. De querer eliminarlos todos, se encuentra el botón "Vaciar carrito", dejando el carrito vacío con el mensaje de aviso de que no hay productos en el carrito, y un botón para volver al home. No se permite la compra sin productos seleccionados. 
-En el caso de haber agregado productos al carrito, con el fin de terminar la compra, se encuentra el botón de "Realizar compra", que se encuentra deshabilitado por defecto, hasta completar el formulario obligatario, a llenar por el cliente. Dichos datos se guardan en firestore, y una vez realizado este proceso, se vacía el carrito y se le devuelve al usuario un mensaje de agradecimiento, junto con su Id de compra y de que esta se ha realizado correctamente. -->
+
+### 7. Carrito de compras vacío
+
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679453/sonidocodeado-paginaejemplo/07_ll97i6.png)
+
+### 8. Ingreso de usuarios
+
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679454/sonidocodeado-paginaejemplo/08_gg8dvm.png)
+
+### 9. Creación de cuenta de usuario
+
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679463/sonidocodeado-paginaejemplo/09_a6fgvz.png)
+
+
+# *Flujo de Compra - Descripción*
+
+Ecommerse de productos de sonido profesional.
+Al ingresar el sitio, se muestra un listado de productos en los cuales se puede acceder a cada uno, seleccionar una cantidad y agregar al carrito de compras. Se puede seguir agregando productos al carrito retornando al inicio o accediendo a categorias o marcas
+Una vez seleccionados los productos, se puede dirigir al carrito de compras para finalizar la misma. 
+Dentro del carrito, se listan los productos incorporados, pudiendose eliminar alguno o todos, y se puede continuar con la compra, creando un usuario, o completando los datos de un formularo. 
 
 # *Componentes:*
 

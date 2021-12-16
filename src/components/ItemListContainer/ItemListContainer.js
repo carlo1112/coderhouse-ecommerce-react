@@ -59,7 +59,7 @@ const ItemListContainer = ({ greeting }) => {
     <div className="itemListContainer">
       <div className="container-fluid">
         <div className="container justify-content-center display-flex p-2 text-center">
-          {(greeting !== "") ? <h2>{greeting}</h2> : <h2>{`Filtro: ${filter} - ${id_filter}`}</h2>}
+          {(greeting !== "") ? <h2>{greeting}</h2> : <h2>{`Filtro: ${id_filter}`}</h2>} {/**${filter} -  */}
         </div>
 
         {/* Si está loading los products muestro el mensaje, sino llamo a ItemList con products */}
