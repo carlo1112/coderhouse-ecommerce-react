@@ -1,38 +1,9 @@
-# Proyecto en desarrollo por Carlos Cattaneo 
-Realizado en curso de React JS de CoderHouse, comisión 16975
-
-## Versión subida a surge: [https://sonidocodeado.surge.sh/]
-
-## Para este proyecto (Sonido Codeado) se incorporó:
-
-### React-Bootstrap: [https://react-bootstrap.github.io/]
-### Instalación:
-`npm install bootstrap react-bootstrap` 
-`import 'bootstrap/dist/css/bootstrap.min.css'`
-
-### Fontawesome: [https://fontawesome.com/]
-### Instalación:
-`npm i --save @fortawesome/fontawesome-svg-core`
-`npm install --save @fortawesome/free-solid-svg-icons`
-`npm install --save @fortawesome/react-fontawesome`
-`npm install --save @fortawesome/free-brands-svg-icons`
-
-
-### React-Router: [https://v5.reactrouter.com/web/]
-### Instalación: 
-`npm install react-router-dom` 
-
-### Firebase [https://firebase.google.com/]
-### Instalación `npm install firebase@9.6.0`
-
-### ###############################################
-
 # **Sonido Codeado, Ecommerce - React.js**
 # *Curso de React JS de CoderHouse*
 ### **Desarrollo por Carlos Cattaneo**
-*Contacto: [carlo1112@gmail.com]*
-*LinkedIn: [https://www.linkedin.com/in/carlo1112/]*
-*GitHub: [https://github.com/carlo1112]*
+- *Contacto: [carlo1112@gmail.com]*
+- *LinkedIn: [https://www.linkedin.com/in/carlo1112/]*
+- *GitHub: [https://github.com/carlo1112]*
 
 # *Información del proyecto:*
 
@@ -40,7 +11,7 @@ Proyecto final para el curso de React.js de [CoderHouse](https://www.coderhouse.
 Consiste en un ecommerce implementado con React.js junto a React Router, React Hooks, React-Bootstrap y Firebase.
 
 ## *Version 1.0.0:*
-- [![App](https://sonidocodeado.surge.sh/)
+- [App](https://sonidocodeado.surge.sh/)
 
 - Se usa como base de datos Firestore
 ## *Desarrollado con:*
@@ -58,10 +29,9 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 _Dinámica de funcionamiento del sitio:_
 
-![gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
+-[![Gif]](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
 
-
-**Screenshots:**
+**Capturas:**
 
 ### 1. Inicio:
 ## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679459/sonidocodeado-paginaejemplo/01_lzkgwr.png)
