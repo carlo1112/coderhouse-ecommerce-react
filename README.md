@@ -31,6 +31,10 @@ _Dinámica de funcionamiento del sitio:_
 
 -[![Gif]](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
 
+-![Sample Gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
+
++<img src="./src/components/Assets/SonidoCodeado-Funcionamiento.gif?raw=true" width="200px">
+
 **Capturas:**
 
 ### 1. Inicio:
