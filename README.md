@@ -1,9 +1,9 @@
 # **Sonido Codeado, Ecommerce - React.js**
 # *Curso de React JS de CoderHouse*
 ### **Desarrollo por Carlos Cattaneo**
-- *Contacto: [carlo1112@gmail.com]*
-- *LinkedIn: [https://www.linkedin.com/in/carlo1112/]*
-- *GitHub: [https://github.com/carlo1112]*
+- *Contacto: carlo1112@gmail.com*
+- *LinkedIn: https://www.linkedin.com/in/carlo1112/*
+- *GitHub: https://github.com/carlo1112*
 
 # *Información del proyecto:*
 
@@ -59,7 +59,6 @@ _Dinámica de funcionamiento del sitio:_
 ### 6. Si no hay productos en el carrito:
 
 ## ![](public/images/flujo-compra/carrito-vacio.png)
-# *Flujo de Compra - Descripción*
 
 ### 7. Carrito de compras vacío
 
@@ -74,7 +73,7 @@ _Dinámica de funcionamiento del sitio:_
 ## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679463/sonidocodeado-paginaejemplo/09_a6fgvz.png)
 
 
-# *Flujo de Compra - Descripción*
+# *Descripción de funcionamiento del sitio*
 
 Ecommerse de productos de sonido profesional.
 Al ingresar el sitio, se muestra un listado de productos en los cuales se puede acceder a cada uno, seleccionar una cantidad y agregar al carrito de compras. Se puede seguir agregando productos al carrito retornando al inicio o accediendo a categorias o marcas
