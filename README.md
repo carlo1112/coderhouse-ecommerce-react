@@ -11,7 +11,8 @@ Proyecto final para el curso de React.js de [CoderHouse](https://www.coderhouse.
 Consiste en un ecommerce implementado con React.js junto a React Router, React Hooks, React-Bootstrap y Firebase.
 
 ## *Version 1.0.0:*
-- [App](https://sonidocodeado.surge.sh/)
+*App: carlo1112@gmail.com*
+- [App:](https://sonidocodeado.surge.sh/) *sonidocodeado.surge.sh*
 
 - Se usa como base de datos Firestore
 ## *Desarrollado con:*
