@@ -58,7 +58,7 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 _Dinámica de funcionamiento del sitio:_
 
-![gif](https://res.cloudinary.com/carlo1112/image/upload/v1639685266/sonidocodeado-paginaejemplo/SonidoCodeado-Funcionamiento_rgwoob.gif)
+![gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
 
 
 **Screenshots:**
