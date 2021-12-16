@@ -25,7 +25,7 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 # *Sobre el flujo de compra:*
 
-# Gif del sitio
+## Gif del sitio
 
 _Dinámica de funcionamiento del sitio:_
 
@@ -35,7 +35,9 @@ _Dinámica de funcionamiento del sitio:_
 
 <!-- +<img src="./src/components/Assets/SonidoCodeado-Funcionamiento.gif?raw=true" width="200px"> -->
 
-**Capturas:**
+#
+
+## **Capturas:**
 
 ### 1. Inicio:
 ## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679459/sonidocodeado-paginaejemplo/01_lzkgwr.png)
