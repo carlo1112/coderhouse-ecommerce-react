@@ -60,7 +60,7 @@ _Dinámica de funcionamiento del sitio:_
 
 ### 6. Si no hay productos en el carrito:
 
-## ![](public/images/flujo-compra/carrito-vacio.png)
+## ![](https://res.cloudinary.com/carlo1112/image/upload/v1639679449/sonidocodeado-paginaejemplo/06_nsrxoe.png)
 
 ### 7. Carrito de compras vacío
 
