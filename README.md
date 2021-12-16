@@ -12,7 +12,7 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 ## *Version 1.0.0:*
 *App: carlo1112@gmail.com*
-- [App:](https://sonidocodeado.surge.sh/) *sonidocodeado.surge.sh*
+- [App:](https://sonidocodeado.surge.sh/) *https://sonidocodeado.surge.sh/*
 
 - Se usa como base de datos Firestore
 ## *Desarrollado con:*
