@@ -29,11 +29,11 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 _Dinámica de funcionamiento del sitio:_
 
--[![Gif]](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
+<!-- -[![Gif]](./src/components/Assets/SonidoCodeado-Funcionamiento.gif) -->
 
--![Sample Gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
+![Sample Gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
 
-+<img src="./src/components/Assets/SonidoCodeado-Funcionamiento.gif?raw=true" width="200px">
+<!-- +<img src="./src/components/Assets/SonidoCodeado-Funcionamiento.gif?raw=true" width="200px"> -->
 
 **Capturas:**
 
