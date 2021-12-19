@@ -9,10 +9,15 @@ import { faSlidersH } from '@fortawesome/free-solid-svg-icons'
 // iconSlider is created for the brand icon
 const iconSlider = <FontAwesomeIcon icon={faSlidersH} />
 
-const Modals = ({ mostrar, text }) => {
+const Modals = ({ mostrar, text, handleCancel }) => {
   const [show, setShow] = useState(mostrar);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false)
+    if (handleCancel !== undefined)
+      handleCancel()
+  };
+
   // const handleShow = () => setShow(true);
 
   useEffect(() => {

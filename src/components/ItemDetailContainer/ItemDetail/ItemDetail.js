@@ -29,7 +29,7 @@ const ItemDetail = ({ id, title, description, price, pictureUrl, stock, category
 
   return (
     <Container className="col-12 col-md-12 col-lg-12 d-flex justify-content-center my-3">
-      {showModal ? <Modals mostrar={showModal} text={message} /> : <></>}
+      {showModal ? <Modals mostrar={showModal} text={message} handleCancel={() => setShowModal(false)} /> : <></>}
 
       <Card style={{ heigth: "20rem" }} className="card p-3 bg-light rounded-3">
         <Card.Body>
@@ -49,7 +49,7 @@ const ItemDetail = ({ id, title, description, price, pictureUrl, stock, category
               :
               <Container className="">
                 <Container className="justify-content-center display-flex col-12 p-2">
-                  <Button as={Link} to='/cart' className="col-4" variant="primary">Terminar compra</Button>
+                  <Button as={Link} to='/cart' className="col-lg-4 col-md-6 col-sm-10" variant="primary">Terminar compra</Button>
                 </Container>
               </Container>
             }

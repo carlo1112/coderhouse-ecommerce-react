@@ -138,7 +138,7 @@ const Cart = () => {
 
   const showFormCart = () => {
     return (
-      <div className="text-center col-8">
+      <div className="text-center col-lg-8 col-sm-10">
         <FormCart onChange={updateUserInfo} />
         <Container className="d-flex flex-row justify-content-center">
           <Button className="m-2" variant="primary" onClick={() => setShowForm(false)}>Volver al carrito</Button>
@@ -169,7 +169,7 @@ const Cart = () => {
   // Return de Cart
   return (
     <div className="cart">
-      <Container className="container align-top justify-content-center p-2 text-center">
+      <Container className="align-top justify-content-center p-2 text-center">
         <h2>Carrito de compras</h2>
         <Container className="d-flex justify-content-center">
           {showModal ? <Modals mostrar={showModal} text={message} /> : <></>}

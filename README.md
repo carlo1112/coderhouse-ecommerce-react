@@ -11,10 +11,9 @@ Proyecto final para el curso de React.js de [CoderHouse](https://www.coderhouse.
 Consiste en un ecommerce implementado con React.js junto a React Router, React Hooks, React-Bootstrap y Firebase.
 
 ## *Version 1.0.0:*
-*App: carlo1112@gmail.com*
-- [App:](https://sonidocodeado.surge.sh/) *https://sonidocodeado.surge.sh/*
+- *App: https://sonidocodeado.surge.sh/*
+- Base de datos: Firebase
 
-- Se usa como base de datos Firestore
 ## *Desarrollado con:*
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -30,11 +29,7 @@ Consiste en un ecommerce implementado con React.js junto a React Router, React H
 
 _Dinámica de funcionamiento del sitio:_
 
-<!-- -[![Gif]](./src/components/Assets/SonidoCodeado-Funcionamiento.gif) -->
-
 ![Sample Gif](./src/components/Assets/SonidoCodeado-Funcionamiento.gif)
-
-<!-- +<img src="./src/components/Assets/SonidoCodeado-Funcionamiento.gif?raw=true" width="200px"> -->
 
 #
 
@@ -85,30 +80,30 @@ Dentro del carrito, se listan los productos incorporados, pudiendose eliminar al
 
 # *Componentes:*
 
-## 1. *Cart*
-## 2. *CartItem*
-## 3. *CartWidget*
-## 4. *Contact*
-## 5. *CartContext*
-## 6. *AuthContext*
-## 7. *Faq*
-## 8. *Firebase*
-## 9. *Footer*
-## 10. *FormCart*
-## 11. *ItemCount*
-## 12. *ItemDetailContainer*
-## 13. *ItemDetail*
-## 14. *ItemListContainer*
-## 15. *ItemList*
-## 16. *Item*
-## 17. *Loadin*
-## 18. *Login*
-## 19. *Main*
-## 20. *Modals*
-## 21. *ModalsConfirm*
-## 22. *NavBar*
-## 23. *Register*
-## 24. *UserNav*
+### 1. *Cart*
+### 2. *CartItem*
+### 3. *CartWidget*
+### 4. *Contact*
+### 5. *CartContext*
+### 6. *AuthContext*
+### 7. *Faq*
+### 8. *Firebase*
+### 9. *Footer*
+### 10. *FormCart*
+### 11. *ItemCount*
+### 12. *ItemDetailContainer*
+### 13. *ItemDetail*
+### 14. *ItemListContainer*
+### 15. *ItemList*
+### 16. *Item*
+### 17. *Loadin*
+### 18. *Login*
+### 19. *Main*
+### 20. *Modals*
+### 21. *ModalsConfirm*
+### 22. *NavBar*
+### 23. *Register*
+### 24. *UserNav*
 #
 
 # Importante: para descargar y usar el proyecto

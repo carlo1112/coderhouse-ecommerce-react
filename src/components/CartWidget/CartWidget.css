@@ -21,3 +21,9 @@
   font-size: 12px !important;
   line-height: 19px;
 }
+
+@media only screen and (max-width: 768px) {
+  .cart_widget > a {
+    padding-left: 0;
+  }
+}

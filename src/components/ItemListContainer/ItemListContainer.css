@@ -16,3 +16,9 @@
   justify-content: space-around;
   display: grid;  
 }
+
+@media only screen and (max-width: 768px) {    
+  .itemListContainer > div:first-child {
+    width: 100%;
+  }
+}

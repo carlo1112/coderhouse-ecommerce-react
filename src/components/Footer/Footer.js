@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <Container>
-        <div class="footer">
+        <div className="footer">
           <div id="copyright">
             <Link to={`/`}>
               {iconSlider} Sonido Codeado
@@ -22,8 +22,8 @@ const Footer = () => {
           <div id="copyright">
             Copyright ©2021.
           </div>
-          <div id="copyright-name" class="footer-copyright">
-            Diseñado por <span class="footer-text">Carlos Cattaneo </span>
+          <div id="copyright-name" className="footer-copyright">
+            Diseñado por <span className="footer-text">Carlos Cattaneo </span>
           </div>
         </div >
       </Container >

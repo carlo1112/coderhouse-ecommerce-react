@@ -6,7 +6,7 @@ import "./UserNav.css"
 const UserNav = () => {
 
   const { signOut, loggedUser } = useAuth()
-
+console.log(loggedUser)
   return (
     <div className="header">
       <div className="logger-user">
@@ -14,11 +14,13 @@ const UserNav = () => {
           loggedUser ?
             (
               <>
-                <div>{loggedUser.name}</div>
+                <div className="user-name">{loggedUser.name}</div>
                 <Button className="btn btn-link btn-anchor" onClick={signOut}>Cerrar sesión</Button>
               </>
-            ) : (
+            ) : (<>
               <Button className="btn btn-link btn-anchor login" as={Link} to={`/login`}>Ingresar</Button>
+              <Button className="btn btn-link btn-anchor" onClick={signOut}>Cerrar sesión</Button>
+              </>
             )
         }
       </div>

@@ -58,3 +58,36 @@
 .cart-actions .container button{
  margin-right: 12px;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .cart .container .container {
+    padding:0px;
+  }    
+  .cart-table{
+    padding: 1px;
+  }
+  .header-table {
+    padding: 10px 1px;
+  }
+  .item-table {
+    padding: 10px 1px;
+  }
+
+  .item-table .btn-danger {
+    padding: 0;
+    background-color: transparent;
+    color: #dc3545;
+    border-color: transparent;
+  }
+  .card-text {
+    padding: 0px !important;
+  }
+
+  .col-xs-5, .col-sm-5, .col-md-5 {
+    width: 41.66666667%;
+  } 
+
+}

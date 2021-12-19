@@ -1,0 +1,8 @@
+@media only screen and (max-width: 768px) {  
+  .user-form .row {
+    flex-direction: column;
+  }
+  .user-form .row .col{
+    padding-bottom: 10px;
+  }
+}

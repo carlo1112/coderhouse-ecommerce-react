@@ -22,10 +22,10 @@ const CartItem = ({ id, title, price, description, pictureUrl, quantity, subtota
   return (
     <>
       {showModalConfirm ? <ModalsConfirm mostrar={showModalConfirm} text={"¿Está seguro que desea eliminar el producto del carrito?"} handleConfirm={() => remove(id, quantity, price)} handleCancel={() => setShowModalConfirm(false)} /> : <></>}
-      <div className="col-1 cartItemImg">
+      <div className="col-1 d-none d-sm-block cartItemImg">
         <Card.Img className="rounded-3 cardImg" variant="top" src={pictureUrl} alt={title} style={{ maxHeight: "50%", display: "block" }} />
       </div>
-      <div className="col-4" style={{ textAlign: "left" }}>
+      <div className="col-xs-5 col-sm-5 col-md-5 col-lg-4" style={{ textAlign: "left" }}>
         <Card.Title >{title}</Card.Title>
         <Card.Text className="text-muted">{description}</Card.Text>
       </div>

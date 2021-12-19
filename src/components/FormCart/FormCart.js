@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Form, Row, Col } from "react-bootstrap"
 import { useAuth } from '../Context/AuthContext'
+import './FormCart.css'
 
 const FormCart = ({ onChange }) => {
   const { loggedUser } = useAuth()
@@ -24,7 +25,7 @@ const FormCart = ({ onChange }) => {
         loggedUser ?
           (<p className="p-2">Comprar como <strong>{loggedUser.email}</strong></p>)
           :
-          (<Form>
+          (<Form className="user-form">
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridName">
                 <Form.Label>Nombre</Form.Label>

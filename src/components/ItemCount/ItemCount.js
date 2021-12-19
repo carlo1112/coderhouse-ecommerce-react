@@ -36,14 +36,14 @@ const ItemCount = ({ stock, initial, onAdd, onChange }) => {
           <Card.Text className="text-muted">Stock disponible: {stockItem}</Card.Text>
         </Container>
 
-        <Container className=" d-flex justify-content-between col-4 p-2">
-          <Button className="col-3" variant="primary" onClick={modifyStock.restarStock} disabled={stockItem === 0 && quantity === 0}>-</Button>
+        <Container className="col-lg-4 col-md-6 col-sm-10 d-flex justify-content-between p-2 mb-2">
+          <Button className="col-3 justify-content-center" variant="primary" onClick={modifyStock.restarStock} disabled={stockItem === 0 && quantity === 0}> - </Button>
           <h5>{quantity}</h5>
-          <Button className="col-3" variant="primary" onClick={modifyStock.sumarStock} disabled={stockItem === 0 && quantity === 0}>+</Button>
+          <Button className="col-3 justify-content-center" variant="primary" onClick={modifyStock.sumarStock} disabled={stockItem === 0 && quantity === 0}> + </Button>
         </Container>
 
         <Container className=" d-flex justify-content-center">
-          <Button className="col-4" variant="primary" onClick={() => { onAdd({ quantity }) }} disabled={stockItem === 0 && quantity === 0}>
+          <Button className="col-lg-4 col-md-6 col-sm-10" variant="primary" onClick={() => { onAdd({ quantity }) }} disabled={stockItem === 0 && quantity === 0}>
             Agregar al carrito
           </Button>
         </Container>

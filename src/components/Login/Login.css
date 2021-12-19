@@ -50,3 +50,11 @@
 .forgot-password a {
   color: #167bff;
 }
+
+
+@media only screen and (max-width: 768px) {  
+  .inner {
+    width: 90%;
+    padding: 40px 15px 45px 15px;
+  }
+}
