@@ -21,7 +21,7 @@ const NavBar = () => {
           Sonido Codeado
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav navbar-collapse">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
